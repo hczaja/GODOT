@@ -1,0 +1,12 @@
+# this folder stores all the files it import automatically
+.import/
+*.import
+
+# binary imported translations generated from CSV files
+*.translation
+
+# this file contains all the export presets for the project
+export_presets.cfg
+
+# this folder stores automatically-generated Mono files
+.mono/
