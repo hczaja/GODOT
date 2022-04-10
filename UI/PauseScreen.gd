@@ -21,5 +21,6 @@ func _on_Fullscreen_pressed():
 
 func _on_MainMenu_pressed():
 	CoinsService.reset()
+	PlayerStatsService.reset()
 	_on_Continue_pressed()
 	get_tree().change_scene("res://UI/MainMenu.tscn")

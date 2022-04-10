@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 CoinsService="*res://CoinsService.gd"
+PlayerStatsService="*res://Global/PlayerStatsService.tscn"
 PauseScreen="*res://UI/PauseScreen.tscn"
 
 [display]

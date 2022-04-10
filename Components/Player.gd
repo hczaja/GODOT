@@ -45,3 +45,7 @@ func _physics_process(delta):
 	velocity.y = move_toward(velocity.y, max_velocity_y, gravity * delta)
 	
 	move_and_slide(velocity, Vector2.UP)
+
+func _input(event):
+	if event.is_action_pressed("ui_down"):
+		PlayerStatsService.health -= 1
