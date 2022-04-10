@@ -158,9 +158,9 @@ position = Vector2( 0, 2 )
 current = true
 
 [node name="Label" parent="Player/Camera2D" instance=ExtResource( 4 )]
-margin_left = -158.0
+margin_left = 102.0
 margin_top = -88.0
-margin_right = -102.0
+margin_right = 158.0
 margin_bottom = -73.0
 
 [node name="Coin2" parent="." instance=ExtResource( 3 )]
