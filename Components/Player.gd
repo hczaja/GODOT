@@ -2,7 +2,10 @@ extends KinematicBody2D
 
 var velocity = Vector2.ZERO
 
+var max_velocity = max_velocity_x
 const max_velocity_x = 100
+const max_velocity_x_sprint = 140
+
 const max_velocity_y = 170
 
 const acceleration = 800
@@ -40,8 +43,16 @@ func _physics_process(delta):
 		sprite.flip_h = direction < 0
 		
 	_jump_process(delta)
-			
-	velocity.x = move_toward(velocity.x, direction * max_velocity_x, acceleration * delta)
+	
+	var sprint = Input.get_action_strength("ui_sprint")
+	if sprint > 0:
+		PlayerStatsService.energy -= 5
+		max_velocity = max_velocity_x_sprint
+	else:
+		max_velocity = max_velocity_x
+		
+		
+	velocity.x = move_toward(velocity.x, direction * max_velocity, acceleration * delta)
 	velocity.y = move_toward(velocity.y, max_velocity_y, gravity * delta)
 	
 	move_and_slide(velocity, Vector2.UP)

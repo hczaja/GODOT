@@ -5,3 +5,6 @@
 [node name="PlayerStatsService" type="Node2D"]
 script = ExtResource( 1 )
 max_health = 5
+max_energy = 100
+max_health_potions = 3
+max_energy_potions = 5

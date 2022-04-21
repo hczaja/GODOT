@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/UI/Energy_Under.png" type="Texture" id=1]
+[ext_resource path="res://Assets/UI/Energy_Background.png" type="Texture" id=2]
+[ext_resource path="res://Assets/UI/Energy_Progress.png" type="Texture" id=3]
+[ext_resource path="res://UI/EnergyService.gd" type="Script" id=4]
+
+[node name="EnergyService" type="Control"]
+margin_top = 15.0
+margin_right = 80.0
+margin_bottom = 23.0
+script = ExtResource( 4 )
+
+[node name="EnergyBar" type="TextureProgress" parent="."]
+margin_right = 80.0
+margin_bottom = 8.0
+rounded = true
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 1 )
+texture_progress = ExtResource( 3 )

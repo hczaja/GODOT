@@ -34,5 +34,3 @@ position = Vector2( 0, -0.249999 )
 scale = Vector2( 1, 1.10938 )
 frames = SubResource( 16 )
 animation = "Idle"
-
-[connection signal="body_entered" from="." to="." method="_on_Area2D_body_entered"]
